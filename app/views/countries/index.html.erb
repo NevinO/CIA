@@ -1,0 +1,9 @@
+<% @countries.each do |country| %>
+<main class="container">
+  
+  <%= link_to("Show #{country.name}", country_path(country)) %>
+  <%= button_to('Delete Country', country_path(country), method: :delete, data:{confirm: 'Delete them? Are you sure?'}) %>
+  <%= link_to('Edit Country', edit_country_path(country)) %>
+  </main>
+  <br>
+<% end %>
